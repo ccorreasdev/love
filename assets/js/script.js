@@ -14,6 +14,8 @@ import { windowResizeListener } from "./class/WindowResize.js"
 
 //Constants and variables
 const canvas = document.querySelector("#canvas");
+const loading = document.querySelector("#loading");
+const loadingLayout = document.querySelector("#loading-layout");
 const progressBar = document.querySelector("#progress-bar");
 let master = new Master();
 let touchControls = new TouchControls();
@@ -52,7 +54,19 @@ const init = async () => {
         models.percentLoaded = 50;
         return models.loadModelGLTF("heart");
     }).then((resolve) => {
+        console.log(loading.src)
+        loading.src = "./assets/img/heart.png"
         models.percentLoaded = 100;
+        setTimeout(() => {
+            loadingLayout.classList.add("loading__layout--hidden");
+
+
+            setTimeout(() => {
+                canvas.classList.add("canvas--active");
+
+            }, 500);
+
+        }, 500)
     });
 
     console.log(models.getLoadedModels(0));
