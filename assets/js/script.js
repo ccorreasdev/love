@@ -75,7 +75,7 @@ const init = async () => {
 
     //Listeners
     windowResizeListener(master, models.getLoadedModels(0).model, models.getLoadedModels(1));
-    mouseMove.mouseMoveListener();
+    mouseMove.mouseMoveListener(models.getLoadedModels(0).model);
     scrollWindow.scrollListener();
     keyListener.init();
     //touchControls.initTouchControls(keyListener.getKeysPressed());
@@ -93,7 +93,7 @@ const animate = () => {
     requestAnimationFrame(animate);
 
     //Wait last model is loaded
-    if (models.getLoadedModels(0)) {
+    if (models.getLoadedModels(1)) {
 
         models.getLoadedModels(1).rotation.y += 0.01
 
