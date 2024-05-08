@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Bugatti";
+    src: url("../font/Bugatti/Bugatti.woff2");
+}
+
+@font-face {
+    font-family: "Spaceman";
+    src: url("../font/Spaceman/SPACEMAN.TTF");
+}
+
+@font-face {
+    font-family: "Spaceage";
+    src: url("../font/space_age/space\ age.ttf");
+}
+
+@font-face {
+    font-family: "LucySaid";
+    src: url("../font/lucy_said_ok/Lucy\ Said\ Ok\ Personal\ Use.ttf");
+}
+
+@font-face {
+    font-family: "love";
+    src: url("../font/love_romance/love_romance_ot.otf");
+}
+
+:root {
+    --bg-color: #343434;
+    --text-color: #d8d8d6;
+    --primary-color: #61697B;
+    --secondary-color: #381C47;
+    --secondary-color-a: rgba(56, 28, 71, 0.4);
+    --bg-color-1: #0992a4;
+    --bg-color-2: #0a61d4;
+    --bg-color-3: #313a45;
+    --bg-color-4: #252f38;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {}
+
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    color: var(--text-color);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Bugatti', 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(180deg, #ffcbff, #56327c);
+    z-index: 99;
+
+}
+
+.main__layout {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.main__title {
+    font-family: "Lucysaid";
+    font-size: 5rem;
+    color: white;
+}
+
+.main__icon {
+    color: rgb(255, 50, 50);
+    font-family: "love";
+}
+
+
+.canvas {
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    pointer-events: none;
+    position: relative;
+    z-index: -1;
+    background-color: transparent;
+
+}
