@@ -74,7 +74,7 @@ const init = async () => {
     master.scene.add(models.getLoadedModels(1));
 
     //Listeners
-    windowResizeListener(master);
+    windowResizeListener(master, models.getLoadedModels(0).model, models.getLoadedModels(1));
     mouseMove.mouseMoveListener();
     scrollWindow.scrollListener();
     keyListener.init();
