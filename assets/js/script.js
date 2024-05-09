@@ -96,6 +96,27 @@ const init = async () => {
     keyListener.init();
     //touchControls.initTouchControls(keyListener.getKeysPressed());
     htmlActionsListener(0);
+
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    master.camera.aspect = width / height;
+    master.camera.updateProjectionMatrix();
+    master.renderer.setSize(width, height);
+
+    if (width >= 1280) {
+        models.getLoadedModels(0).model.scale.set(1, 1, 1)
+        models.getLoadedModels(1).scale.set(1, 1, 1);
+    } else if (width >= 768) {
+        models.getLoadedModels(0).model.scale.set(1, 1, 1)
+        models.getLoadedModels(1).scale.set(1, 1, 1);
+    } else if (width >= 500) {
+        models.getLoadedModels(0).model.scale.set(0.6, 0.6, 0.6)
+        models.getLoadedModels(1).scale.set(0.2, 0.4, 0.4);
+    } else if (width >= 400) {
+        models.getLoadedModels(0).model.scale.set(0.6, 0.6, 0.6)
+        models.getLoadedModels(1).scale.set(0.6, 0.6, 0.6);
+    }
 };
 
 

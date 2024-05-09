@@ -59,7 +59,7 @@ body {}
     color: var(--text-color);
     position: relative;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     font-size: 1.8rem;
     font-weight: 400;
     font-family: 'Bugatti', 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -87,7 +87,7 @@ body {}
     font-size: 5rem;
     color: white;
     position: absolute;
-    top: calc(50% + 300px);
+    top: calc(50% + 250px);
 }
 
 .main__icon {
