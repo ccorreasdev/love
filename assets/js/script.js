@@ -52,11 +52,13 @@ const init = async () => {
 
     await models.loadModelGLTFAnimation("bouquet").then((resolve) => {
         models.percentLoaded = 50;
+        loading.style.clipPath = "polygon(0 0, 50% 0, 50% 100%, 0% 100%)";
         return models.loadModelGLTF("heart");
     }).then((resolve) => {
         console.log(loading.src)
         loading.src = "./assets/img/heart.png"
         models.percentLoaded = 100;
+        loading.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
         setTimeout(() => {
             loadingLayout.classList.add("loading__layout--hidden");
 
@@ -64,9 +66,9 @@ const init = async () => {
             setTimeout(() => {
                 canvas.classList.add("canvas--active");
 
-            }, 500);
+            }, 1000);
 
-        }, 500)
+        }, 1000)
     });
 
     console.log(models.getLoadedModels(0));
