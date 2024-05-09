@@ -49,7 +49,7 @@ const init = async () => {
 
     //Load 3D Models
     models = new Models();
-
+    loading.style.clipPath = "polygon(0 0, 25% 0, 25% 100%, 0% 100%)";
     await models.loadModelGLTFAnimation("bouquet").then((resolve) => {
         models.percentLoaded = 50;
         loading.style.clipPath = "polygon(0 0, 50% 0, 50% 100%, 0% 100%)";
